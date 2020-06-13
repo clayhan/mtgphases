@@ -6,7 +6,8 @@ import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 const Wrapper = styled.div`
-  width: 50%;
+  height: 100%;
+  width: 100%;
   border: 1px solid black;
   @media (max-width: 768px) {
     transform: ${props => (props.rotate ? 'rotate(180deg)' : 'none')};
