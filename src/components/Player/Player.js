@@ -23,6 +23,7 @@ const Player = props => {
     nextPhase,
     phaseActions,
     rotate,
+    endTurn,
   } = props;
 
   const [totalLife, setTotalLife] = useState(20);
@@ -74,7 +75,14 @@ const Player = props => {
               : null}
             {/* End of Button */}
             <div>Text</div>
-            <div>{activePlayer ? mappedBtn.text : null}</div>
+            <div>
+              {activePlayer && !displayPlayerTwoBtns ? mappedBtn.text : null}
+            </div>
+            <div>
+              {activePlayer && !displayPlayerTwoBtns ? (
+                <Button onClick={endTurn}>End Turn</Button>
+              ) : null}
+            </div>
           </div>
         );
       })}
@@ -91,6 +99,7 @@ Player.propTypes = {
   nextPhase: PropTypes.func,
   phaseActions: PropTypes.func,
   rotate: PropTypes.bool,
+  endTurn: PropTypes.func,
 };
 
 export default Player;

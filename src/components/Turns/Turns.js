@@ -82,9 +82,10 @@ const Turns = props => {
   const endTurn = () => {
     const passTurnStr = turnsMap.passTurn.key;
     for (let i = 0; i < turnsOrder.length; i += 1) {
-      if (turnsOrder[i] === passTurnStr) {
+      if (turnsOrder[i].key === passTurnStr) {
         setCurrentPhaseIndex(i);
-        setCurrentPhase(passTurnStr);
+        setCurrentPhase(turnsMap.endTurn);
+        passPriority();
         break;
       }
     }
@@ -114,6 +115,7 @@ const Turns = props => {
         passPriority={passPriority}
         nextPhase={nextPhase}
         phaseActions={phaseActions}
+        endTurn={endTurn}
       />
       <Player
         activePlayer={!isActivePlayer}
@@ -125,6 +127,7 @@ const Turns = props => {
         passPriority={passPriority}
         nextPhase={nextPhase}
         phaseActions={phaseActions}
+        endTurn={endTurn}
         rotate
       />
     </Wrapper>
