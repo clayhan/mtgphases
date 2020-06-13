@@ -57,7 +57,7 @@ const Player = props => {
 
         return (
           <div>
-            <div>{activePlayer ? 'Player 1' : 'Player 2'}</div>
+            <div>{rotate ? 'Player 2' : 'Player 1'}</div>
             <div>
               <Button onClick={() => updateLife('down')}>
                 <ArrowDownwardIcon />
