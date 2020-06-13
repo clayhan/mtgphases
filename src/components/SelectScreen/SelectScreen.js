@@ -8,6 +8,7 @@ const SelectScreen = () => {
 
   const selectPlayer = (
     <div>
+      <div>Which player goes first?</div>
       <Button
         variant="contained"
         color="primary"
@@ -22,7 +23,7 @@ const SelectScreen = () => {
       >
         Player 2
       </Button>
-
+      <div>Roll for start!</div>
       <Roll20 />
     </div>
   );
