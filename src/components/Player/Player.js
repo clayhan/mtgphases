@@ -35,7 +35,9 @@ const Player = props => {
   };
 
   const buttonToDisplay = (btnText, action) => (
-    <Button onClick={action}>{btnText}</Button>
+    <Button variant="contained" color="primary" onClick={action}>
+      {btnText}
+    </Button>
   );
 
   return (
