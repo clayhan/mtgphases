@@ -1,7 +1,8 @@
 import React from 'react';
+import SelectScreen from './components/SelectScreen/SelectScreen';
 
 function App() {
-  return <div className="App">test</div>;
+  return <SelectScreen />;
 }
 
 export default App;
